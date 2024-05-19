@@ -1,0 +1,54 @@
+/* Hero.module.css */
+.neatoHeader {
+  color: #e0e0e0; /* Light gray text color */
+  padding: 50px; /* Reduced padding */
+  text-align: center; /* Center text */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* Center the header */
+  width: 100%; /* Ensure it doesn't exceed the container width */
+  max-width: 700px; /* Optional: Set a max-width */
+  background: rgba(0, 0, 0, 0.6); /* Add a semi-transparent background for better text visibility */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.neatoHeader h1,
+.neatoHeader h2 {
+  letter-spacing: 0.05em;
+  margin: 0; /* Ensure no additional margin */
+  padding: 10px 0; /* Add padding inside header */
+}
+
+.neatoHeader h1 {
+  font-size: 2em; /* Adjust font size */
+  font-family: "Fjalla One", sans-serif;
+  text-transform: uppercase;
+}
+
+.neatoHeader h2 {
+  font-family: "Fjalla One", sans-serif;
+  font-weight: italic;
+  font-size: 1.5em; /* Adjust font size */
+  margin: 10px 0 0 0; /* Add some margin at the top */
+}
+
+.hero {
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  height: 100vh;
+  padding: 1em;
+  box-sizing: border-box;
+  color: #e0e0e0; /* Light gray text color */
+  background-image: url('https://wallpaperaccess.com/full/3762458.jpg'); /* Background image */
+  background-size: cover;
+  background-position: center; /* Center the background image */
+}
+
+.heroFooter {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Add margin at the top */
+}

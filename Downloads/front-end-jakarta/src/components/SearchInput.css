@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css?family=Material+Icons");
+
+.searchBox {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transform: translate(0, 0);
+  background: #2f3640;
+  height: 40px;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  transition: width 0.4s;
+}
+
+.searchBox.expanded {
+  width: 240px;
+}
+
+.searchButton {
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #2f3640;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+
+.searchButton.expanded {
+  background: white;
+  color: #2f3640;
+}
+
+.searchInput {
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+  transition: width 0.4s;
+  line-height: 40px;
+  width: 0px;
+  flex: 1;
+}
+
+.searchBox.expanded .searchInput {
+  width: 200px;
+  padding: 0 6px;
+}
+
+@media screen and (max-width: 620px) {
+  .searchBox.expanded {
+    width: 150px;
+  }
+
+  .searchBox.expanded .searchInput {
+    width: 120px;
+  }
+}
+
+.search-container {
+  position: relative;
+}
+
+.searchResults {
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  background: #2f3640;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 240px;
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.searchItem {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #444;
+}
+
+.searchItem img {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.searchItemInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.searchItemInfo h4 {
+  margin: 0;
+  color: white;
+  font-size: 14px;
+}
+
+
+
+

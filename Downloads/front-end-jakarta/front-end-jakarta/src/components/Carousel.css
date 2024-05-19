@@ -1,0 +1,255 @@
+.carousel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background-color: #000;
+  padding: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+}
+
+.slide {
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: opacity 0.5s ease;
+  animation: fadeOut 0.5s ease-out forwards, slideOut 0.5s ease-out forwards;
+}
+
+.slide-active {
+  opacity: 1;
+  animation: fadeIn 0.5s ease-in forwards, slideIn 0.5s ease-in forwards;
+}
+
+.slide-hidden {
+  display: none;
+}
+
+.slide-image {
+  width: 80%;
+  margin-top: 20px;
+  border-radius: 10px;
+  height: 500px;
+  object-fit: cover;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+h3 {
+  font-size: 2rem;
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+
+.slide-description {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 1.25rem;
+  animation: fadeIn 1s ease-in forwards, slideIn 1s ease-in forwards;
+}
+
+.culinary {
+  margin-top: 15px;
+  width: 100%;
+}
+
+.culinary h4 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  color: #ff6347;
+}
+
+.culinary-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.culinary-image {
+  width: 30%;
+  border-radius: 10px;
+  margin-right: 20px;
+  animation: fadeIn 1s ease-in forwards, slideIn 1s ease-in forwards;
+}
+
+.culinary-text {
+  flex: 1;
+  text-align: left;
+  font-size: 1.125rem;
+  animation: fadeIn 1s ease-in forwards, slideIn 1s ease-in forwards;
+}
+
+.slide-title {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.slide-text {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.arrow {
+  position: absolute;
+  filter: drop-shadow(0px 0px 5px #555);
+  width: 3rem;
+  height: 3rem;
+  color: white;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.arrow:hover {
+  cursor: pointer;
+  color: #ff6347;
+}
+
+.arrow-left {
+  left: 1rem;
+}
+
+.arrow-right {
+  right: 1rem;
+}
+
+.indicators {
+  display: flex;
+  position: absolute;
+  bottom: 1rem;
+}
+
+.indicator {
+  background-color: white;
+  height: 0.75rem;
+  width: 0.75rem;
+  border-radius: 100%;
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 5px #555;
+  margin: 0 0.2rem;
+  cursor: pointer;
+}
+
+.indicator-inactive {
+  background-color: grey;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .slide-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .slide-description {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  .culinary-image {
+    width: 40%;
+    margin-right: 10px;
+  }
+
+  .culinary h4 {
+    font-size: 1.25rem;
+  }
+
+  .culinary-text {
+    font-size: 1rem;
+  }
+
+  .arrow {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide-description {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .culinary-image {
+    width: 50%;
+    margin-right: 5px;
+  }
+
+  .culinary h4 {
+    font-size: 1rem;
+  }
+
+  .culinary-text {
+    font-size: 0.875rem;
+  }
+
+  .arrow {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+}
