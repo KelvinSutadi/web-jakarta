@@ -1,0 +1,1 @@
+export const API_URLS = "https://jakarta-api.netlify.app/.netlify/functions/app"
